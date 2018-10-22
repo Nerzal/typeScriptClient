@@ -1,0 +1,4 @@
+{
+    "files.autoSave": "onFocusChange",
+    "mocha.files.glob": "test/**/*.ts"
+}

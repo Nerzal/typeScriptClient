@@ -6,7 +6,8 @@
   "dependencies": {
     "@types/es6-promise": "^3.3.0",
     "request": "^2.88.0",
-    "request-promise-native": "^1.0.5"
+    "request-promise-native": "^1.0.5",
+    "snyk": "^1.316.1"
   },
   "devDependencies": {
     "@types/chai": "^4.1.6",
@@ -19,7 +20,9 @@
   },
   "scripts": {
     "test": "mocha -r ts-node/register src/**/*.test.ts",
-    "testWithCoverage": "nyc -r lcov -e .ts -x \"*.test.ts\" mocha -r ts-node/register src/**/*.test.ts && nyc report"
+    "testWithCoverage": "nyc -r lcov -e .ts -x \"*.test.ts\" mocha -r ts-node/register src/**/*.test.ts && nyc report",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "repository": {
     "type": "git",
@@ -30,5 +33,6 @@
   "bugs": {
     "url": "https://github.com/Nerzal/typeScriptClient/issues"
   },
-  "homepage": "https://github.com/Nerzal/typeScriptClient#readme"
+  "homepage": "https://github.com/Nerzal/typeScriptClient#readme",
+  "snyk": true
 }
